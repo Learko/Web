@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+	{% for inc in css %}
+		<link rel="stylesheet" type="text/css" href="/template_static/{{ inc }}"/>
+	{% endfor %}
+	<link rel="stylesheet" type="text/css" href="github.css">
+{% endblock %}
+
+{% block body %}
+	<ul>
+		<li><a href="about/aboutme.html">About [relative path]</a></li>
+		<li><a href="http://localhost:8000/about/aboutme.html">About [absolute path]</a></li>
+	</ul>
+
+	{% for inc in js %}
+		<link rel="stylesheet" href="/template_static/{{ inc }}"/>
+	{% endfor %}
+{% endblock %}
